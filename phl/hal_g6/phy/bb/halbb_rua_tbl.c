@@ -26,7 +26,7 @@
 
 #ifdef HALBB_RUA_SUPPORT
 
-u32 halbb_rua_tbl_hdr_cfg(struct bb_info *bb,
+static u32 halbb_rua_tbl_hdr_cfg(struct bb_info *bb,
 		struct rtw_rua_tbl_hdr *rtw_tbl_hdr,
 		struct halbb_rua_tbl_hdr_info *rua_tbl_hdr)
 {
@@ -46,7 +46,7 @@ u32 halbb_rua_tbl_hdr_cfg(struct bb_info *bb,
 	return ret;
 }
 
-void halbb_ru_rate_cfg(struct bb_info *bb,
+static void halbb_ru_rate_cfg(struct bb_info *bb,
 		struct rtw_ru_rate_ent *rate_ent,
 		struct halbb_ru_rate_info *rate)
 {
@@ -56,7 +56,7 @@ void halbb_ru_rate_cfg(struct bb_info *bb,
 	rate->ss = rate_ent->ss;
 }
 
-u32 halbb_dlfix_sta_i_ax4ru_cfg(struct bb_info *bb,
+static u32 halbb_dlfix_sta_i_ax4ru_cfg(struct bb_info *bb,
 		struct rtw_dlfix_sta_i_ax4ru *sta_ent,
 		struct halbb_dl_fix_sta_info *fix_sta_i)
 {
@@ -86,7 +86,7 @@ u32 halbb_dlfix_sta_i_ax4ru_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_dlfix_sta_i_ax8ru_cfg(struct bb_info *bb,
+static u32 halbb_dlfix_sta_i_ax8ru_cfg(struct bb_info *bb,
 			struct rtw_dlfix_sta_i_ax8ru *sta_ent,
 			struct halbb_dl_fix_sta_info_8ru *fix_sta_i)
 {
@@ -116,7 +116,7 @@ u32 halbb_dlfix_sta_i_ax8ru_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_dlfix_sta_i_ext_cfg(struct bb_info *bb,
+static u32 halbb_dlfix_sta_i_ext_cfg(struct bb_info *bb,
 		struct rtw_dlfix_sta_i_ext *sta_ent,
 		struct halbb_dlfix_sta_i_ext *fix_sta_i)
 {
@@ -144,7 +144,7 @@ u32 halbb_dlfix_sta_i_ext_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_ulfix_sta_i_ax4ru_cfg(struct bb_info *bb,
+static u32 halbb_ulfix_sta_i_ax4ru_cfg(struct bb_info *bb,
 		struct rtw_ulfix_sta_i_ax4ru *sta_ent,
 		struct halbb_ul_fix_sta_info *fix_sta_i)
 {
@@ -173,7 +173,7 @@ u32 halbb_ulfix_sta_i_ax4ru_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_ulfix_sta_i_ax8ru_cfg(struct bb_info *bb,
+static u32 halbb_ulfix_sta_i_ax8ru_cfg(struct bb_info *bb,
 			struct rtw_ulfix_sta_i_ax8ru *sta_ent,
 			struct halbb_ul_fix_sta_info_8ru *fix_sta_i)
 {
@@ -202,7 +202,7 @@ u32 halbb_ulfix_sta_i_ax8ru_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_ulfix_sta_i_ext_cfg(struct bb_info *bb,
+static u32 halbb_ulfix_sta_i_ext_cfg(struct bb_info *bb,
 		struct rtw_ulfix_sta_i_ext *sta_ent,
 		struct halbb_ulfix_sta_i_ext *fix_sta_i)
 {
@@ -226,7 +226,7 @@ u32 halbb_ulfix_sta_i_ext_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_ulfix_rupostbl_16ru_cfg(struct bb_info *bb,
+static u32 halbb_ulfix_rupostbl_16ru_cfg(struct bb_info *bb,
 		struct rtw_rupos_fixtbl *rtw_rupos,
 		struct halbb_rupos_fixtbl *halbb_rupos)
 {
@@ -273,7 +273,7 @@ u32 halbb_ulfix_rupostbl_16ru_cfg(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_tf_ba_tbl_info_cfg(struct bb_info *bb,
+static u32 halbb_tf_ba_tbl_info_cfg(struct bb_info *bb,
 			struct rtw_tf_ba_tbl *tf_tbl,
 			struct halbb_tf_ba_tbl_info *tf_i)
 {
@@ -314,7 +314,7 @@ void halbb_rua_tbl_init(struct bb_info *bb)
 }
 
 
-u32 halbb_dlru_fixtbl_ax4ru(struct bb_info *bb,
+static u32 halbb_dlru_fixtbl_ax4ru(struct bb_info *bb,
 			struct rtw_dlru_fixtbl_ax4ru *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -360,7 +360,7 @@ out:
 	return ret;
 }
 
-u32 halbb_dlru_fixtbl_ax8ru(struct bb_info *bb,
+static u32 halbb_dlru_fixtbl_ax8ru(struct bb_info *bb,
 			struct rtw_dlru_fixtbl_ax8ru *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -405,7 +405,7 @@ out:
 	return ret;
 }
 
-u32 halbb_dlru_fixtbl_univrsl(struct bb_info *bb,
+static u32 halbb_dlru_fixtbl_univrsl(struct bb_info *bb,
 			struct rtw_dlru_fixtbl_univrsl *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -507,7 +507,7 @@ u32 halbb_upd_dlru_fixtbl(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_ulru_fixtbl_ax4ru(struct bb_info *bb,
+static u32 halbb_ulru_fixtbl_ax4ru(struct bb_info *bb,
 		struct rtw_ulru_fixtbl_ax4ru *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -553,7 +553,7 @@ out:
 	return ret;
 }
 
-u32 halbb_ulru_fixtbl_ax8ru(struct bb_info *bb,
+static u32 halbb_ulru_fixtbl_ax8ru(struct bb_info *bb,
 		struct rtw_ulru_fixtbl_ax8ru *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -600,7 +600,7 @@ out:
 	return ret;
 }
 
-u32 halbb_ulru_fixtbl_univrsl(struct bb_info *bb,
+static u32 halbb_ulru_fixtbl_univrsl(struct bb_info *bb,
 		struct rtw_ulru_fixtbl_univrsl *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -703,7 +703,7 @@ u32 halbb_upd_ulru_fixtbl(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_dlru_grptbl_ext(struct bb_info *bb,
+static u32 halbb_dlru_grptbl_ext(struct bb_info *bb,
 		struct rtw_dl_ru_gp_tbl *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -743,7 +743,7 @@ out:
 }
 
 
-u32 halbb_dlru_grptbl(struct bb_info *bb,
+static u32 halbb_dlru_grptbl(struct bb_info *bb,
 		struct rtw_dl_ru_gp_tbl *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -831,7 +831,7 @@ u32 halbb_upd_dlru_grptbl(struct bb_info *bb,
 	return ret;
 }
 
-u32 halbb_ulru_grptbl_ext(struct bb_info *bb,
+static u32 halbb_ulru_grptbl_ext(struct bb_info *bb,
 		struct rtw_ul_ru_gp_tbl *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -878,7 +878,7 @@ out:
 	return ret;
 }
 
-u32 halbb_ulru_grptbl(struct bb_info *bb,
+static u32 halbb_ulru_grptbl(struct bb_info *bb,
 		struct rtw_ul_ru_gp_tbl *info)
 {
 	u32 ret = RTW_HAL_STATUS_FAILURE;
@@ -1350,7 +1350,7 @@ u32 halbb_ulmacid_cfg(struct bb_info *bb, struct rtw_ul_macid_set *cfg)
 }
 
 
-u32 halbb_ch_bw_upd(struct bb_info *bb, struct rtw_ch_bw_notif *cfg){
+static u32 halbb_ch_bw_upd(struct bb_info *bb, struct rtw_ch_bw_notif *cfg){
 	u32 ret = RTW_HAL_STATUS_FAILURE;
 
 	u8 band_idx = cfg->band_idx;
@@ -1516,7 +1516,7 @@ u32 halbb_cqi_cfg(struct bb_info *bb, struct rtw_cqi_set *cfg)
 
 }
 
-u32 halbb_rua_rawread(struct bb_info *bb, u8 band, u8 src_sel, u8 id, u8 ofst32){
+static u32 halbb_rua_rawread(struct bb_info *bb, u8 band, u8 src_sel, u8 id, u8 ofst32){
 	u32 ret = RTW_HAL_STATUS_FAILURE;
 
 	u8 *bbinfo_i;
@@ -1549,7 +1549,7 @@ u32 halbb_rua_rawread(struct bb_info *bb, u8 band, u8 src_sel, u8 id, u8 ofst32)
 
 }
 
-u32 halbb_rua_rawwrite(struct bb_info *bb, u8 band, u8 src_sel, u8 id, u8 ofst32, u8 ofst8, u32 w_val){
+static u32 halbb_rua_rawwrite(struct bb_info *bb, u8 band, u8 src_sel, u8 id, u8 ofst32, u8 ofst8, u32 w_val){
 	u32 ret = RTW_HAL_STATUS_FAILURE;
 
 	u8 *bbinfo_i;
@@ -1637,7 +1637,7 @@ u32 halbb_bbinfo_cfg(struct bb_info *bb, struct rtw_bbinfo_cfg *cfg)
 
 }
 
-u8 halbb_path_num(enum rf_path path){
+static u8 halbb_path_num(enum rf_path path){
 	u8 path_num = 0;
 	switch (path) {
 	case RF_PATH_AB:
@@ -1667,7 +1667,7 @@ u8 halbb_path_num(enum rf_path path){
 	return path_num;
 }
 
-u32 halbb_trxpath_upd(struct bb_info *bb, u8 txpath_num, u8 rxpath_num){
+static u32 halbb_trxpath_upd(struct bb_info *bb, u8 txpath_num, u8 rxpath_num){
 	u32 ret = RTW_HAL_STATUS_FAILURE;
 
 	struct rtw_bbinfo_cfg bbinfo_cfg;
@@ -1722,7 +1722,7 @@ u32 halbb_trxpath_notif(struct bb_info *bb, enum rf_path tx_path, enum rf_path r
 	return ret;
 }
 
-u32 halbb_pwrtbl_upd(struct bb_info *bb, struct rtw_pwrtbl_notif *cfg){
+static u32 halbb_pwrtbl_upd(struct bb_info *bb, struct rtw_pwrtbl_notif *cfg){
 	u32 ret = RTW_HAL_STATUS_FAILURE;
 	u8 len = sizeof(struct rtw_pwrtbl_notif);
 	struct halbb_pwrtbl_notif *notif;
@@ -1854,7 +1854,7 @@ u32 halbb_pbr_tbl_cfg(struct bb_info *bb, struct rtw_pwr_by_rt_tbl *cfg)
 }
 
 /* For Test mode */
-void halbb_test_dlru_gp_tbl(struct bb_info *bb, struct rtw_dl_ru_gp_tbl *tbl)
+static void halbb_test_dlru_gp_tbl(struct bb_info *bb, struct rtw_dl_ru_gp_tbl *tbl)
 {
 	tbl->tbl_hdr.rw = 1; /* write */
 	tbl->tbl_hdr.idx = 0;
@@ -1883,7 +1883,7 @@ void halbb_test_dlru_gp_tbl(struct bb_info *bb, struct rtw_dl_ru_gp_tbl *tbl)
 	tbl->tf.ma_type = 0;
 }
 
-void halbb_test_dl_sta_ent0_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_dl_sta_ent0_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 122;
@@ -1901,7 +1901,7 @@ void halbb_test_dl_sta_ent0_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru
 	sta_ent->pwr_boost_fac = 0;
 }
 
-void halbb_test_dl_sta_ent1_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_dl_sta_ent1_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
 {
 	sta_ent->mac_id = 1;
 	sta_ent->ru_pos[0] = 124;
@@ -1919,7 +1919,7 @@ void halbb_test_dl_sta_ent1_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru
 	sta_ent->pwr_boost_fac = 0;
 }
 
-void halbb_test_dl_sta_ent2_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_dl_sta_ent2_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
 {
 	sta_ent->mac_id = 2;
 	sta_ent->ru_pos[0] = 0;
@@ -1937,7 +1937,7 @@ void halbb_test_dl_sta_ent2_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru
 	sta_ent->pwr_boost_fac = 0;
 }
 
-void halbb_test_dl_sta_ent3_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_dl_sta_ent3_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru *sta_ent)
 {
 	sta_ent->mac_id = 255;
 	sta_ent->ru_pos[0] = 0;
@@ -1955,7 +1955,7 @@ void halbb_test_dl_sta_ent3_4ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax4ru
 	sta_ent->pwr_boost_fac = 0;
 }
 
-void halbb_test_dl_sta_ent0_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_dl_sta_ent0_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 11;
@@ -1976,7 +1976,7 @@ void halbb_test_dl_sta_ent0_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru
 	sta_ent->coding = 1;
 	sta_ent->pwr_boost_fac = 0;
 }
-void halbb_test_dl_sta_ent1_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_dl_sta_ent1_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 12;
@@ -1997,7 +1997,7 @@ void halbb_test_dl_sta_ent1_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru
 	sta_ent->coding = 1;
 	sta_ent->pwr_boost_fac = 0;
 }
-void halbb_test_dl_sta_ent2_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_dl_sta_ent2_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 13;
@@ -2018,7 +2018,7 @@ void halbb_test_dl_sta_ent2_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru
 	sta_ent->coding = 1;
 	sta_ent->pwr_boost_fac = 0;
 }
-void halbb_test_dl_sta_ent3_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_dl_sta_ent3_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 14;
@@ -2040,7 +2040,7 @@ void halbb_test_dl_sta_ent3_8ru(struct bb_info *bb, struct rtw_dlfix_sta_i_ax8ru
 	sta_ent->pwr_boost_fac = 0;
 }
 
-void halbb_test_dl_fix_tbl(struct bb_info *bb, union rtw_dlru_fixtbl *tbl)
+static void halbb_test_dl_fix_tbl(struct bb_info *bb, union rtw_dlru_fixtbl *tbl)
 {
 	halbb_mem_set(bb, tbl,0,sizeof(union rtw_dlru_fixtbl));
 
@@ -2088,7 +2088,7 @@ void halbb_test_dl_fix_tbl(struct bb_info *bb, union rtw_dlru_fixtbl *tbl)
 	}
 }
 
-void halbb_test_ru_sta_info(struct bb_info *bb, struct rtw_ru_sta_info *tbl)
+static void halbb_test_ru_sta_info(struct bb_info *bb, struct rtw_ru_sta_info *tbl)
 {
 	halbb_mem_set(bb, tbl,0,sizeof(union rtw_dlru_fixtbl));
 
@@ -2130,7 +2130,7 @@ void halbb_test_ru_sta_info(struct bb_info *bb, struct rtw_ru_sta_info *tbl)
 	tbl->ul_swgrp_bitmap = 2;
 }
 
-void halbb_test_ul_sta_ent0_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_ul_sta_ent0_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 122;
@@ -2151,7 +2151,7 @@ void halbb_test_ul_sta_ent0_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru
 
 }
 
-void halbb_test_ul_sta_ent1_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_ul_sta_ent1_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
 {
 
 	sta_ent->mac_id = 1;
@@ -2173,7 +2173,7 @@ void halbb_test_ul_sta_ent1_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru
 
 }
 
-void halbb_test_ul_sta_ent2_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_ul_sta_ent2_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
 {
 	sta_ent->mac_id = 255;
 	sta_ent->ru_pos[0] = 0;
@@ -2193,7 +2193,7 @@ void halbb_test_ul_sta_ent2_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru
 	sta_ent->coding = 1;
 }
 
-void halbb_test_ul_sta_ent3_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
+static void halbb_test_ul_sta_ent3_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru *sta_ent)
 {
 
 	sta_ent->mac_id = 255;
@@ -2214,7 +2214,7 @@ void halbb_test_ul_sta_ent3_4ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax4ru
 	sta_ent->coding = 1;
 }
 
-void halbb_test_ul_sta_ent0_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_ul_sta_ent0_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 11;
@@ -2243,7 +2243,7 @@ void halbb_test_ul_sta_ent0_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru
 
 }
 
-void halbb_test_ul_sta_ent1_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_ul_sta_ent1_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 12;
@@ -2271,7 +2271,7 @@ void halbb_test_ul_sta_ent1_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru
 	sta_ent->coding = 1;
 
 }
-void halbb_test_ul_sta_ent2_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_ul_sta_ent2_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 13;
@@ -2299,7 +2299,7 @@ void halbb_test_ul_sta_ent2_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru
 	sta_ent->coding = 1;
 
 }
-void halbb_test_ul_sta_ent3_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
+static void halbb_test_ul_sta_ent3_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru *sta_ent)
 {
 	sta_ent->mac_id = 0;
 	sta_ent->ru_pos[0] = 14;
@@ -2328,7 +2328,7 @@ void halbb_test_ul_sta_ent3_8ru(struct bb_info *bb, struct rtw_ulfix_sta_i_ax8ru
 
 }
 
-void halbb_test_ul_fix_tbl(struct bb_info *bb, union rtw_ulru_fixtbl *tbl)
+static void halbb_test_ul_fix_tbl(struct bb_info *bb, union rtw_ulru_fixtbl *tbl)
 {
 	switch (bb->ic_type) {
 		case BB_RTL8852C:
@@ -2378,7 +2378,7 @@ void halbb_test_ul_fix_tbl(struct bb_info *bb, union rtw_ulru_fixtbl *tbl)
 	}
 }
 
-void halbb_test_ulru_gp_tbl(struct bb_info *bb, struct rtw_ul_ru_gp_tbl *tbl)
+static void halbb_test_ulru_gp_tbl(struct bb_info *bb, struct rtw_ul_ru_gp_tbl *tbl)
 {
 	tbl->tbl_hdr.rw = 1; /* write */
 	tbl->tbl_hdr.idx = 0;
@@ -2395,7 +2395,7 @@ void halbb_test_ulru_gp_tbl(struct bb_info *bb, struct rtw_ul_ru_gp_tbl *tbl)
 	tbl->fix_mode_flag= 1;
 }
 
-void halbb_test_ba_tbl(struct bb_info *bb, struct rtw_ba_tbl_info *tbl)
+static void halbb_test_ba_tbl(struct bb_info *bb, struct rtw_ba_tbl_info *tbl)
 {
 	tbl->tbl_hdr.rw = 1;
 	tbl->tbl_hdr.idx = 0;
@@ -2421,7 +2421,7 @@ void halbb_test_ba_tbl(struct bb_info *bb, struct rtw_ba_tbl_info *tbl)
 
 }
 
-void halbb_test_swgrp_hdl(struct bb_info *bb, struct rtw_sw_grp_set *hdl)
+static void halbb_test_swgrp_hdl(struct bb_info *bb, struct rtw_sw_grp_set *hdl)
 {
 	hdl->swgrp_bitmap[0].macid = 3;
 	hdl->swgrp_bitmap[0].en_upd_dl_swgrp = 1;
@@ -2438,7 +2438,7 @@ void halbb_test_swgrp_hdl(struct bb_info *bb, struct rtw_sw_grp_set *hdl)
 	hdl->swgrp_bitmap[1].cmdend = 1;
 }
 
-void halbb_test_dlmacid_cfg(struct bb_info *bb, struct rtw_dl_macid_cfg *cfg)
+static void halbb_test_dlmacid_cfg(struct bb_info *bb, struct rtw_dl_macid_cfg *cfg)
 {
 	cfg->macid = 5;
 	cfg->dl_su_rate_cfg = 1;
@@ -2475,7 +2475,7 @@ void halbb_test_dlmacid_cfg(struct bb_info *bb, struct rtw_dl_macid_cfg *cfg)
 	cfg->he_80m_in_160m_cap = 1;
 }
 
-void halbb_test_ulmacid_cfg(struct bb_info *bb, struct rtw_ul_macid_set *cfg)
+static void halbb_test_ulmacid_cfg(struct bb_info *bb, struct rtw_ul_macid_set *cfg)
 {
 	cfg->ul_macid_cfg[0].macid = 5;
 	cfg->ul_macid_cfg[0].endcmd = 0;
@@ -2524,7 +2524,7 @@ void halbb_test_ulmacid_cfg(struct bb_info *bb, struct rtw_ul_macid_set *cfg)
 }
 
 
-void halbb_test_sta_modify(struct bb_info *bb, struct rtw_dlru_fixtbl_ax4ru *fix_tbl, u8 mcs, u8 ss)
+static void halbb_test_sta_modify(struct bb_info *bb, struct rtw_dlru_fixtbl_ax4ru *fix_tbl, u8 mcs, u8 ss)
 {
 	fix_tbl->max_sta_num = 2;
 	fix_tbl->min_sta_num = 2;
@@ -2594,7 +2594,7 @@ void halbb_test_sta_modify(struct bb_info *bb, struct rtw_dlru_fixtbl_ax4ru *fix
 	fix_tbl->sta[3].pwr_boost_fac=0;
 }
 
-void halbb_test_grppwr_modify(struct bb_info *bb, struct rtw_dl_ru_gp_tbl *tbl, u8 grp_pwr)
+static void halbb_test_grppwr_modify(struct bb_info *bb, struct rtw_dl_ru_gp_tbl *tbl, u8 grp_pwr)
 {
 	tbl->ppdu_bw = CHANNEL_WIDTH_80;
 	tbl->tx_pwr = grp_pwr; /*TODO:get from bb api*/
@@ -2620,14 +2620,14 @@ void halbb_test_grppwr_modify(struct bb_info *bb, struct rtw_dl_ru_gp_tbl *tbl, 
 	tbl->tf.ma_type = 0;
 }
 
-void halbb_test_csiinfo_cfg(struct bb_info *bb, struct rtw_csiinfo_cfg *cfg)
+static void halbb_test_csiinfo_cfg(struct bb_info *bb, struct rtw_csiinfo_cfg *cfg)
 {
 	cfg->macid = 5;
 	cfg->csi_info_bitmap= 99;
 }
 
 
-void halbb_test_cqi_cfg(struct bb_info *bb, struct rtw_cqi_set *cfg)
+static void halbb_test_cqi_cfg(struct bb_info *bb, struct rtw_cqi_set *cfg)
 {
 	u8 i;
 
@@ -2669,12 +2669,12 @@ void halbb_test_cqi_cfg(struct bb_info *bb, struct rtw_cqi_set *cfg)
 
 }
 
-void halbb_test_bbinfo_cfg(struct bb_info *bb, struct rtw_bbinfo_cfg *cfg)
+static void halbb_test_bbinfo_cfg(struct bb_info *bb, struct rtw_bbinfo_cfg *cfg)
 {
 //	cfg->p20_ch_bitmap= 168;
 }
 
-void halbb_test_pbr_tbl_cfg(struct bb_info *bb, struct rtw_pwr_by_rt_tbl *cfg)
+static void halbb_test_pbr_tbl_cfg(struct bb_info *bb, struct rtw_pwr_by_rt_tbl *cfg)
 {
 	u8 i;
 
@@ -2683,7 +2683,7 @@ void halbb_test_pbr_tbl_cfg(struct bb_info *bb, struct rtw_pwr_by_rt_tbl *cfg)
 }
 
 
-u32 halbb_set_rua_tbl(struct bb_info *bb, u8 rua_tbl_idx)
+static u32 halbb_set_rua_tbl(struct bb_info *bb, u8 rua_tbl_idx)
 {
 
 	u32 ret = 0;
@@ -2726,7 +2726,7 @@ u32 halbb_set_rua_tbl(struct bb_info *bb, u8 rua_tbl_idx)
 	return ret;
 }
 
-u32 halbb_set_rua_cfg(struct bb_info *bb, u8 rua_cfg_idx)
+static u32 halbb_set_rua_cfg(struct bb_info *bb, u8 rua_cfg_idx)
 {
 
 	u32 ret = 0;
@@ -2785,7 +2785,7 @@ u32 halbb_set_rua_cfg(struct bb_info *bb, u8 rua_cfg_idx)
 	return ret;
 }
 
-u32 halbb_set_rua_sta_rate_ss(struct bb_info *bb, u8 hdr_type, u8 ent, u8 mcs, u8 ss)
+static u32 halbb_set_rua_sta_rate_ss(struct bb_info *bb, u8 hdr_type, u8 ent, u8 mcs, u8 ss)
 {
 	u32 ret = 0;
 	//struct rtw_dlru_fixtbl_ax4ru dl_ru_fix_t;
@@ -2810,7 +2810,7 @@ u32 halbb_set_rua_sta_rate_ss(struct bb_info *bb, u8 hdr_type, u8 ent, u8 mcs, u
 }
 
 
-u32 halbb_set_rua_grp_pwr(struct bb_info *bb, u8 hdr_type, u8 ent, u8 grp_pwr)
+static u32 halbb_set_rua_grp_pwr(struct bb_info *bb, u8 hdr_type, u8 ent, u8 grp_pwr)
 {
 
 	u32 ret = 0;
@@ -2834,7 +2834,7 @@ u32 halbb_set_rua_grp_pwr(struct bb_info *bb, u8 hdr_type, u8 ent, u8 grp_pwr)
 }
 
 
-u32 halbb_ra_masking_test(
+static u32 halbb_ra_masking_test(
 	struct bb_info *bb,
 	u8 macid_l,
 	u8 macid_m,
